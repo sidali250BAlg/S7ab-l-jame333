@@ -1,0 +1,39 @@
+===================== 03-05-2018  ==================
+
+1- creation dossion includes(header, footer, navbar)
+2- ceration fichier index
+3- creation DB
+4- creation admin/categorie.php
+
+===================== 04-05-2018  ==================
+
+5- creation admin/sous_categorie.php
+6- rendre navbar li dynamique
+7- insertion du dossier login avec session
+8- insertion du login avec session dans admin
+9- creation du fichier logout
+10- ajouter un produit
+11- upload l'image
+12- afficher les produits dans les pages
+
+
+13-creation header avant navbar dans fichier navbar
+14- ajout logo
+15- ajout navbar/option
+
+
+
+
+
+
+
+
+
+
+====================== 03-05-2018  ==============
+
+11- activer la validation
+  - footer
+- div produit
+- navbar fix
+- rechrche bootstrap
