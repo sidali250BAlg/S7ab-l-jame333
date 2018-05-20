@@ -30,9 +30,9 @@
         <td>john@example.com</td>
       </tr>
       <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@mail.com</td>
+        <td>yacine </td>
+        <td>djehlane</td>
+        <td>yacine@mail.com</td>
       </tr>
       <tr>
         <td>July</td>
