@@ -35,9 +35,9 @@
         <td>yacine@mail.com</td>
       </tr>
       <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@greatstuff.com</td>
+        <td>djamel</td>
+        <td>cherbal</td>
+        <td>djamel@greatstuff.com</td>
       </tr>
       <tr>
         <td>Anja</td>
