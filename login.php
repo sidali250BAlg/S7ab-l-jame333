@@ -4,11 +4,12 @@
 	$title = 'Login';
 	include 'includes/header.php';
 	include 'includes/connect.php';
+	include 'functions/functions.php';
 
 if(isset($_POST['submit']))
 	{
-		$username=htmlspecialchars(mysql_real_escape_string($_POST['username']));
-		$pass=htmlspecialchars(mysql_real_escape_string($_POST['pass']));
+		$username=htmlspecialchars($_POST['username']);
+		$pass=htmlspecialchars($_POST['pass']);
 		if($username && $pass)
 		{
 			$sql=$connect->prepare('SELECT * FROM users WHERE username=? AND password=?');
@@ -25,8 +26,10 @@ if(isset($_POST['submit']))
 				{
 					if($data['validation'] == 1)
 					{
-						header('location:index.php');
+						
 						$_SESSION['username']=$username;
+						crationPanier();
+						header('location:index.php');
 
 					}else
 					{

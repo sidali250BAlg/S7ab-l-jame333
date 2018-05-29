@@ -5,12 +5,12 @@
 
 	if(isset($_POST['submit']))
 	{
-		$username	= htmlspecialchars(mysql_real_escape_string($_POST['username']));
-		$email 		= htmlspecialchars(mysql_real_escape_string($_POST['email']));
-		$repeat_email = htmlspecialchars(mysql_real_escape_string($_POST['repeat_email']));
-		$telephone = htmlspecialchars(mysql_real_escape_string($_POST['telephone']));
-		$pass 		= htmlspecialchars(mysql_real_escape_string($_POST['pass']));
-		$repeat_pass = htmlspecialchars(mysql_real_escape_string($_POST['repeat_pass']));
+		$username	= htmlspecialchars($_POST['username']);
+		$email 		= htmlspecialchars($_POST['email']);
+		$repeat_email = htmlspecialchars($_POST['repeat_email']);
+		$telephone = htmlspecialchars($_POST['telephone']);
+		$pass 		= htmlspecialchars($_POST['pass']);
+		$repeat_pass = htmlspecialchars($_POST['repeat_pass']);
 		if($username && $email && $repeat_email && $telephone && $pass && $repeat_pass)
 		{
 			if($email === $repeat_email)

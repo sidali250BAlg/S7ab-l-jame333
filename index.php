@@ -1,41 +1,36 @@
 <?php
 	session_start();
 	$title = 'Home';
-	include 'includes/header.php';
-	include 'includes/connect.php';
-	include 'includes/navbar.php';
+	include ('includes/header.php');
+	include ('includes/connect.php');
+	include ('includes/navbar.php');
 
-	$sql= $connect->prepare("SELECT * FROM produits WHERE name_produit='img_slider1'");
+	$sql= $connect->prepare("SELECT * FROM slider");
 	$sql->execute();
 
 	$row= $sql->rowCount();
 	
 	if($row > 0)
 	{	
-		$imgs = $sql->fetch();
-		$image1 = $imgs['nom_image'];
+		if($row < 8)
+		{
+		$imgs = $sql->fetchAll();
+		$i = 1;
+		foreach ($imgs as $img) {
 
-		$sql= $connect->prepare("SELECT * FROM produits WHERE name_produit='img_slider2'");
-		$sql->execute();
-
-		$row= $sql->rowCount();
-		
-		if($row > 0)
-		{	
-			$imgs = $sql->fetch();
-			$image2 = $imgs['nom_image'];
-
-			$sql= $connect->prepare("SELECT * FROM produits WHERE name_produit='img_slider3'");
-			$sql->execute();
-
-			$row= $sql->rowCount();
-		
-			if($row > 0)
-			{	
-				$imgs = $sql->fetch();
-				$image3 = $imgs['nom_image'];
-
+			$image[$i] = $img['name_img_slider'];
+			$i += 1;
+		}
 		?>
+
+		<style type="text/css">
+			body
+			{
+				
+				background-image:url('images.jpg') ;
+			}
+		</style>
+
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-7">
@@ -45,22 +40,40 @@
 				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				    <li data-target="#myCarousel" data-slide-to="1"></li>
 				    <li data-target="#myCarousel" data-slide-to="2"></li>
+				    <li data-target="#myCarousel" data-slide-to="3"></li>
+				    <li data-target="#myCarousel" data-slide-to="4"></li>
+				    <li data-target="#myCarousel" data-slide-to="5"></li>
+				    <li data-target="#myCarousel" data-slide-to="6"></li>
 				  </ol>
 
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner">
+				  	
 				    <div class="item active">
-				      <img src="admin/uploads/<?php echo $image1; ?>">
+				      <img src="admin/uploads/slider/<?php echo $image[1]; ?>">
 				    </div>
 
 				    <div class="item">
-				      <img src="admin/uploads/<?php echo $image2; ?>">
+				      <img src="admin/uploads/slider/<?php echo $image[2]; ?>">
 				    </div>
 
 				    <div class="item">
-				      <img src="admin/uploads/<?php echo $image3; ?>">
+				      <img src="admin/uploads/slider/<?php echo $image[3]; ?>">
+				    </div>
+				    <div class="item">
+				      <img src="admin/uploads/slider/<?php echo $image[4]; ?>">
+				    </div>
+				    <div class="item">
+				      <img src="admin/uploads/slider/<?php echo $image[5]; ?>">
+				    </div>
+				    <div class="item">
+				      <img src="admin/uploads/slider/<?php echo $image[6]; ?>">
+				    </div>
+				    <div class="item">
+				      <img src="admin/uploads/slider/<?php echo $image[7]; ?>">
 				    </div>
 				  </div>
+				    
 
 				  <!-- Left and right controls -->
 				  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -75,9 +88,17 @@
 			</div>
 		</div>
 		<?php
+		}else
+		{
+			?>
+				<div class="container">
+					<div class="alert alert-warning">
+						votre slider doit avoir 7 images, Veuillez choisir quelques images et supprimer les autre dans la page de consulter/slider
+					</div>
+				</div>
+			<?php	
 		}
 	}
-}
 
 	?>
 	

@@ -12,8 +12,9 @@
         <ul class="dropdown-menu">
           <li><a href="categorie_consulter.php">Categories</a></li>
           <li><a href="sous_categorie_consulter.php">Sous categories</a></li>
-          <li><a href="ajout_produit.php">Produits</a></li>
+          <li><a href="produit_consulter.php">Produits</a></li>
         	<li><a href="users_consulter.php">Users</a></li>
+          <li><a href="consulter_commande.php">Commandes</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -25,20 +26,12 @@
           <li><a href="panneau_index.php">panneau index</a></li>
           <li><a href="#">Menu secondaire</a></li>
           <li><a href="#">Page de contact</a></li>
+          <li><a href="consulter_slider.php">Slider</a></li>
           <li><a href="#">footer</a></li>
           
         </ul>
       </li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Slider
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="img_slider1.php">Inserer image 1</a></li>
-          <li><a href="img_slider2.php">Inserer image 2</a></li>
-          <li><a href="img_slider3.php">Inserer image 3</a></li>
-        </ul>
-      </li>
-
+      
       
     </ul>
 

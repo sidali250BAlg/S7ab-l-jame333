@@ -6,10 +6,10 @@
 
 	if(isset($_POST['submit']))
 	{
-		$categorie = mysql_real_escape_string(htmlentities($_POST['categorie']));
-		$sous_cat = mysql_real_escape_string(htmlentities($_POST['nom_sous_cat']));
+		$categorie = htmlentities($_POST['categorie']);
+		$sous_cat = htmlentities($_POST['nom_sous_cat']);
 
-		$sql = $connect->prepare("SELECT * FROM sous_categories WHERE nam_sous_cat=?");
+		$sql = $connect->prepare("SELECT * FROM sous_categories WHERE name_sous_cat=?");
 		$sql->execute(array($sous_cat));
 
 		$row = $sql->rowCount();
